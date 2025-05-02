@@ -1,0 +1,40 @@
+.Admin{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+table{
+  width: 80vw;
+  position: relative;
+
+  .header{
+    background-color: rgb(54, 54, 54);
+    color: white;
+    height: 40px;
+  }
+  tr{
+    background-color: rgb(139, 138, 138);
+    color: white;
+    height: 30px;
+    text-align: center;
+  }
+}
+.show{
+  background-color: rgb(54, 54, 54);
+  color: white;
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+}
+.close{
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: -37px;
+}
+span{
+  color: rgb(83, 83, 83);
+}

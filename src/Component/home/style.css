@@ -1,0 +1,32 @@
+nav{
+    height: 20vh;
+    background-color: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .route{
+        height: 27vh;
+        width: 30vw;
+        background-color: green;
+        border-radius: 15px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bolder;
+        font-size: 2rem;
+        transition:  transform 0.3s ease;
+    }
+    .route:hover {
+        transform: scale(1.02);
+        background-color: rgb(0, 145, 0);
+        cursor: pointer;
+    }
+}
