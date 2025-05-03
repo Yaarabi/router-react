@@ -9,7 +9,7 @@ const Info = (props)=>{
             <td>{props.emai}</td>
             <td>{props.phon}</td>
             <td>{props.web}</td>
-            <td><img src="/icon/bin.png" style={{height:"20px"}} alt="delet icon" /></td>
+            <td><img onClick={props.fun} src="/icon/bin.png" style={{height:"20px"}} alt="delet icon" /></td>
         </tr>
     )
 

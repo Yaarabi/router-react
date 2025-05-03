@@ -1,8 +1,17 @@
 
 
+import { useState } from "react"
 import Info from "./info"
 
 const List = ({arr, move})=>{
+
+    const [data, setData]=useState(arr)
+
+    
+
+    let filetr = (index)=>{
+        setData(data.filter((obj)=>(obj.id!==index)))
+    }
 
     return (
         <>
@@ -20,8 +29,8 @@ const List = ({arr, move})=>{
             <tbody>
 
                 {
-                    arr.map((ele)=>
-                        <Info key={ele.id} n={ele.id} nam={ele.name} emai={ele.email} phon={ele.phone} web={ele.website} />
+                    data.map((ele,index)=>
+                        <Info key={ele.id} n={index +1} nam={ele.name} emai={ele.email} phon={ele.phone} web={ele.website} fun={()=>filetr(ele.id)} />
                     )
                 }
             </tbody>

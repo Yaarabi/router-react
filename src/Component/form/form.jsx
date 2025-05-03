@@ -43,7 +43,7 @@ const Form = () => {
     }, [])
     
     const loginToUser =() => {
-        (data.some((ele)=>(name===ele.email)) && data.some((ele)=>(pass===ele.username)))? ( navigate("/user") ) : (alert("Incorrect Input"))
+        (data.some((ele)=>(name===ele.email)) && data.some((ele)=>(pass===ele.username)))? ( navigate("/user", {state: {name}}) ) : (alert("Incorrect Input"))
     }
 
 return (

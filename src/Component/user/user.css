@@ -34,3 +34,12 @@ section{
         }
     }
 }
+.card {
+    border: 5px solid green;
+    height: 40vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}

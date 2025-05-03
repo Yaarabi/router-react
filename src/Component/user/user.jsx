@@ -1,8 +1,9 @@
 
 import {  useState, useEffect, createContext } from 'react'
+import { useLocation } from 'react-router-dom'
 import React from 'react'
 import "./user.css"
-import List from '../admin/list'
+// import List from '../admin/list'
 import { useNavigate } from 'react-router-dom'
 
 // import { Id } from '../form/form'
@@ -10,6 +11,9 @@ import { useNavigate } from 'react-router-dom'
 const Props = createContext()
 
 const User = () => {
+
+let location = useLocation()
+let add = location.add
 
 let [arr, setArr]=useState([])
 let [guide, setGuide]= useState([])
@@ -52,13 +56,13 @@ useEffect(
     }, [])
 
     // const user = arr.find(
-    //     (ele)=>(ele.email===guide)
+    //     (user)=>(user.email===guide)
         
     // )
     const check = ()=>{
         setUser(
             arr.find(
-                    (ele)=>(ele.email===guide)
+                    (user)=>(user.email===guide)
         ))
     }
 
@@ -86,7 +90,16 @@ useEffect(
                 <img className='user' src="/icon/user (2).png" alt="user icon" />
             </div>
             <h2> Hello!, {user.name}, here is some your infprmation</h2>
-            <List arr={[user]}/>
+            <div className="card">
+                <img src="/icon/user (2).png" alt="user img" height={"100px"} />
+                <ul>
+                    <li>{user.name}</li>
+                    <li>{user.email}</li>
+                    <li>{user.phone}</li>
+                    <li>{user.website}</li>
+                    <li>{add}</li>
+                </ul>
+            </div>
             </>
         )}
             <img onClick={logOut} src="/public/icon/door.png" style={{height:"40px"}} alt="log out icon" />
@@ -97,3 +110,4 @@ useEffect(
 
 export default User
 export {Props}
+

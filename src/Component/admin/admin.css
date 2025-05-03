@@ -38,3 +38,6 @@ table{
 span{
   color: rgb(83, 83, 83);
 }
+img{
+  cursor: pointer;
+}
